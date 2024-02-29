@@ -1,0 +1,129 @@
+/* makes sure theres no gaps with the buttons and items inside container*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* shows colors starting from left to the right */
+    background: linear-gradient(to left, #6495ED, #7FFFD4);
+}
+
+
+
+/*******
+Calculator css
+*********/
+
+.calculator {
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+    background: #2F4F4F;
+    border-radius: 5px;
+}
+
+.calc-display {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #B0C4DE;
+    height: 105px;
+    padding: 10px;
+    border: 1px solid #5F9EA0;
+    border-radius: 5px;
+    /* shows where you want to break the words*/
+    word-wrap: break-word;
+    /*breaks all the words and not just one part of it*/
+    word-break: break-all;
+}
+
+#previousInput {
+    color: #696969;
+    font-size: 20px;
+}
+
+#currentInput {
+    color: #2F4F4F;
+    font-size: 25px;
+    overflow-y: auto;
+}
+
+.buttons {
+    margin-top: 0.3px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    border-left: 0.5px solid #483D8B;
+    border-right: 0.5px solid #483D8B;
+    border-bottom: 0.5px solid #483D8B;
+    border-top: 0.5px solid #483D8B;
+}
+
+
+button, .function, #equal {
+    text-decoration: none;
+    background-color: #4682B4;
+    color: white;
+    font-size: 18px;
+    height: 55px;
+    border: 0.5px solid #483D8B;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2F4F4F;
+    color: #F0F8FF;
+    transition: 0.5s ease-in-out;
+}
+
+#clear:hover {
+    background-color: #2F4F4F;
+    color: #F0F8FF;
+    transition: 0.5s ease-in-out;
+}
+
+#delete:hover {
+    background-color: #2F4F4F;
+    color: #F0F8FF;
+    transition: 0.5s ease-in-out;
+}
+
+
+#function, #clear, #delete {
+    background-color: black;
+    background-color: #5F9EA0;
+}
+
+#function:hover {
+    background-color: #2F4F4F;
+    color: #F0F8FF;
+    transition: 0.5s ease-in-out;
+}
+
+#equal {
+    background-color: #6495ED;
+}
+
+#equal:hover {
+    background-color: #BDB76B;
+    color: #F0F8FF;
+    transition: 0.5s ease-in-out;
+}
+
+
+footer {
+    /*keeps footer at the bottom of the page*/
+    position: fixed;
+    bottom: 0;
+    height: 65px;
+    background: #6cf;
+    width: 110%;
+    text-align: center;
+}
